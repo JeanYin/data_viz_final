@@ -1,0 +1,15 @@
+.main {
+    margin: 20px;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+
+}
+.popularity-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
