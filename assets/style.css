@@ -2,13 +2,17 @@
     margin: 20px;
 }
 
+.title {
+    text-align: center;
+}
 .section {
     display: flex;
     justify-content: center;
-    height: 300px;
+    height: auto;
 
 }
 .popularity-content {
+    background-color: #fff1e6;
     width: 100%;
     display: flex;
     justify-content: center;
