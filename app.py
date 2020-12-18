@@ -14,7 +14,7 @@ app = dash.Dash(__name__,external_stylesheets=external_stylesheets)
 server = app.server
 
 df = pd.read_csv('data.csv')
-sub = pd.read_csv("part3_rating.csv")
+# sub = pd.read_csv("part3_rating.csv")
 df_genres = df.copy()
 df_genres['genres'] = df_genres['genres'].str.split(',')
 df_genres = df_genres.explode('genres')
@@ -27,22 +27,22 @@ fig3 = px.bar(byYear, x="startYear", y="averageRating", color="primaryTitle", ti
 fig3.layout.showlegend = False
 fig4 = px.bar(byGenres, x="genres", y="averageRating", color="primaryTitle", title="Top 5 rating movies by genres")
 fig4.layout.showlegend = False
-fig5 = px.scatter(sub, x="MovieRating", y="DirectorRating", color="class", size="scaledVotes",
-                 labels={"class": "Moving Rating vs Director Rating"},
-                 animation_frame="decade",
-                 hover_name="MovieTitle",
-                 hover_data={
-                     "class": False,
-                     "decade": False,
-                     "scaledVotes": False,
-                     "Directors": True
-                 })
-fig5.update_layout(legend_traceorder="reversed")
-fig5.update_xaxes(range=[0, 10])
-fig5.update_yaxes(range=[0, 10])
-fig6 = px.scatter(df, x='averageRating', y='runtimeMinutes', animation_frame='startYear', animation_group='genres',
-           size="averageRating", color='genres', hover_name="primaryTitle",range_x=[0.0,10.0], range_y=[0,600])
-fig6["layout"].pop("updatemenus")
+# fig5 = px.scatter(sub, x="MovieRating", y="DirectorRating", color="class", size="scaledVotes",
+#                  labels={"class": "Moving Rating vs Director Rating"},
+#                  animation_frame="decade",
+#                  hover_name="MovieTitle",
+#                  hover_data={
+#                      "class": False,
+#                      "decade": False,
+#                      "scaledVotes": False,
+#                      "Directors": True
+#                  })
+# fig5.update_layout(legend_traceorder="reversed")
+# fig5.update_xaxes(range=[0, 10])
+# fig5.update_yaxes(range=[0, 10])
+# fig6 = px.scatter(df, x='averageRating', y='runtimeMinutes', animation_frame='startYear', animation_group='genres',
+#            size="averageRating", color='genres', hover_name="primaryTitle",range_x=[0.0,10.0], range_y=[0,600])
+# fig6["layout"].pop("updatemenus")
 
 app.layout = html.Div(className='main',children=[
     html.H1(children='IMDb Data Visualization', className='title'),
@@ -75,10 +75,10 @@ app.layout = html.Div(className='main',children=[
         html.Div(
             className='sub-section',
             children=[
-                # html.Img(
-                #     src='assets/Picture1.png',
-                #     width='600px'
-                # ),
+                html.Img(
+                    src='assets/Picture1.png',
+                    width='600px'
+                ),
                 html.Div(className='text', children='''
                     Considering the information a movie watcher mostly wants to know might be the title of the movie, we used Figma to mock up the blow bubble charts with interactions showing detailed information of each movie. We planned to show decades from 1940s to 2010s. So far, we have mocked up visualizations for two decades (see below).
                 ''')
@@ -185,26 +185,26 @@ app.layout = html.Div(className='main',children=[
             '''),
         ])
     ]),
-    html.Div(className='section', children=[
-        html.Div(className='sub-section', children=[
-            html.H4(children='[title here]'),
-            dcc.Graph(
-                figure=fig5
-            ),
-            html.Div(className='text', children='''
-                [description here]
-            ''')
-        ]),
-        html.Div(className='sub-section', children=[
-            html.H4(children='[title here]'),
-            dcc.Graph(
-                figure=fig6
-            ),
-            html.Div(className='text', children='''
-                [description here]
-            '''),
-        ])
-    ])
+    # html.Div(className='section', children=[
+    #     html.Div(className='sub-section', children=[
+    #         html.H4(children='[title here]'),
+    #         dcc.Graph(
+    #             figure=fig5
+    #         ),
+    #         html.Div(className='text', children='''
+    #             [description here]
+    #         ''')
+    #     ]),
+    #     html.Div(className='sub-section', children=[
+    #         html.H4(children='[title here]'),
+    #         dcc.Graph(
+    #             figure=fig6
+    #         ),
+    #         html.Div(className='text', children='''
+    #             [description here]
+    #         '''),
+    #     ])
+    # ])
 ])
 
 if __name__ == '__main__':
