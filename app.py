@@ -38,7 +38,6 @@ fig5 = px.scatter(sub, x="MovieRating", y="DirectorRating", color="class", size=
                      "Directors": True
                  })
 fig5.update_layout(legend_traceorder="reversed")
-fig5.update_traces(hovertemplate='Movie Rating: %{x} <br>Director Rating: %{y}')
 fig5.update_xaxes(range=[0, 10])
 fig5.update_yaxes(range=[0, 10])
 
@@ -82,4 +81,4 @@ app.layout = html.Div(className='main',children=[
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
