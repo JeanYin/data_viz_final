@@ -118,12 +118,10 @@ app.layout = html.Div(className='main',children=[
             className='sub-section',
             children=[
                 html.H4(children='Which year had maximum releases?'),
-                html.Img(
-                    src='assets/Picture3.png',
-                    height='350px',
-
-
-                ),
+                # html.Img(
+                #     src='assets/Picture3.png',
+                #     height='350px',
+                # ),
                 html.Div(className='text', children='''
                     From this bar graph, we can see that the number of movie releases has increased over years and it reached to the highest point around 2010. 
                 ''')
@@ -132,10 +130,10 @@ app.layout = html.Div(className='main',children=[
             className='sub-section',
             children=[
                 html.H4(children='What are avg running time in millions of movies?'),
-                html.Img(
-                    src='assets/Picture4.png',
-                    height='350px'
-                ),
+                # html.Img(
+                #     src='assets/Picture4.png',
+                #     height='350px'
+                # ),
                 html.Div(className='text', children='''
                     The bar graph displays the distribution of running time of all the movies. There are not many titles longer than 200 minutes and 40 minutes is lower band of the data. Every bin corresponds to 10 minute range. Vast majority of movies is 80-100 mins long.
                 ''')
@@ -158,10 +156,10 @@ app.layout = html.Div(className='main',children=[
             className='sub-section',
             children=[
                 html.H4(children='Which genres of movies are most prevalent?'),
-                html.Img(
-                    src='assets/Picture6.png',
-                    height='350px'
-                ),
+                # html.Img(
+                #     src='assets/Picture6.png',
+                #     height='350px'
+                # ),
                 html.Div(className='text', children='''
                     The pie chart displays the most frequent genres of movies and we can see that movies of the genres ‘Drama’ and ‘Comedy’ were most prevalent over the years.
                 ''')
