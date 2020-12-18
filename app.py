@@ -75,10 +75,10 @@ app.layout = html.Div(className='main',children=[
         html.Div(
             className='sub-section',
             children=[
-                html.Img(
-                    src='assets/Picture1.png',
-                    width='600px'
-                ),
+                # html.Img(
+                #     src='assets/Picture1.png',
+                #     width='600px'
+                # ),
                 html.Div(className='text', children='''
                     Considering the information a movie watcher mostly wants to know might be the title of the movie, we used Figma to mock up the blow bubble charts with interactions showing detailed information of each movie. We planned to show decades from 1940s to 2010s. So far, we have mocked up visualizations for two decades (see below).
                 ''')
@@ -101,10 +101,10 @@ app.layout = html.Div(className='main',children=[
         html.Div(
             className='sub-section',
             children=[
-                html.Img(
-                    src='assets/Picture2.png',
-                    width='600px'
-                ),
+                # html.Img(
+                #     src='assets/Picture2.png',
+                #     width='600px'
+                # ),
                 html.Div(className='text', children='''
                     For the same reason as above, we wanted to develop bubble graphs to show top 5 rated movies for each genre. The interaction feature could show detailed information of each movie for a movie watcher, like running time and rating score. Here below are two of them we have created.                
                 ''')
@@ -144,10 +144,10 @@ app.layout = html.Div(className='main',children=[
             className='sub-section',
             children=[
                 html.H4(children='Are new movies longer than they were 10, 20, 50 year ago?'),
-                html.Img(
-                    src='assets/Picture5.png',
-                    height='350px'
-                ),
+                # html.Img(
+                #     src='assets/Picture5.png',
+                #     height='350px'
+                # ),
                 html.Div(className='text', children='''
                     The graph displays the average running time and its standard deviation over years. We can see they were on average 90 minutes long in early 1930s and reached 100-110 minutes in mid-50s. Since then there is no trend in our data. Also, the standard deviation is fairly consistent with 80-130 minutes runtime. However, the variation changed a lot around 2010 and 2018. We haven’t figured the exact reasons for it.
                 ''')
@@ -185,26 +185,26 @@ app.layout = html.Div(className='main',children=[
             '''),
         ])
     ]),
-    # html.Div(className='section', children=[
-    #     html.Div(className='sub-section', children=[
-    #         html.H4(children='[title here]'),
-    #         dcc.Graph(
-    #             figure=fig5
-    #         ),
-    #         html.Div(className='text', children='''
-    #             [description here]
-    #         ''')
-    #     ]),
-    #     html.Div(className='sub-section', children=[
-    #         html.H4(children='[title here]'),
-    #         dcc.Graph(
-    #             figure=fig6
-    #         ),
-    #         html.Div(className='text', children='''
-    #             [description here]
-    #         '''),
-    #     ])
-    # ])
+    html.Div(className='section', children=[
+        html.Div(className='sub-section', children=[
+            html.H4(children='[title here]'),
+            dcc.Graph(
+                figure=fig5
+            ),
+            html.Div(className='text', children='''
+                [description here]
+            ''')
+        ]),
+        html.Div(className='sub-section', children=[
+            html.H4(children='[title here]'),
+            dcc.Graph(
+                figure=fig6
+            ),
+            html.Div(className='text', children='''
+                [description here]
+            '''),
+        ])
+    ])
 ])
 
 if __name__ == '__main__':
