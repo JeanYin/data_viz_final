@@ -10,12 +10,11 @@ import plotly.express as px
 import pandas as pd
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
 app = dash.Dash(__name__,external_stylesheets=external_stylesheets)
 server = app.server
-# assume you have a "long-form" data frame
-# see https://plotly.com/python/px-arguments/ for more options
+
 df = pd.read_csv('data.csv')
+sub = pd.read_csv("part3_rating.csv")
 df_genres = df.copy()
 df_genres['genres'] = df_genres['genres'].str.split(',')
 df_genres = df_genres.explode('genres')
@@ -28,9 +27,24 @@ fig3 = px.bar(byYear, x="startYear", y="averageRating", color="primaryTitle", ti
 fig3.layout.showlegend = False
 fig4 = px.bar(byGenres, x="genres", y="averageRating", color="primaryTitle", title="Top 5 rating movies by genres")
 fig4.layout.showlegend = False
+fig5 = px.scatter(sub, x="MovieRating", y="DirectorRating", color="class", size="scaledVotes",
+                 labels={"class": "Moving Rating vs Director Rating"},
+                 animation_frame="decade",
+                 hover_name="MovieTitle",
+                 hover_data={
+                     "class": False,
+                     "decade": False,
+                     "scaledVotes": False,
+                     "Directors": True
+                 })
+fig5.update_layout(legend_traceorder="reversed")
+fig5.update_traces(hovertemplate='Movie Rating: %{x} <br>Director Rating: %{y}')
+fig5.update_xaxes(range=[0, 10])
+fig5.update_yaxes(range=[0, 10])
+
 app.layout = html.Div(className='main',children=[
     html.H1(children='IMDb Data Visualization', className='title'),
-    html.H3(children='Top Rated Movie', className='title'),
+    html.H3(children='Movie Watcher', className='title'),
     html.Div(className='section', children=[
         dcc.Graph(
             id='top-5-by-year',
@@ -39,6 +53,12 @@ app.layout = html.Div(className='main',children=[
         dcc.Graph(
             id='top-5-by-genres',
             figure=fig4
+        )
+    ]),
+    html.Div(children=[
+        dcc.Graph(
+            id='movie rating',
+            figure=fig5
         )
     ]),
     html.H3(children='Film Makers', className='title'),
