@@ -1,5 +1,8 @@
+body {
+    width: 100%;
+}
 .main {
-    margin: 20px;
+    margin: 50px;
 }
 
 .title {
@@ -9,11 +12,13 @@
     display: flex;
     justify-content: center;
     height: auto;
+    margin: 0 20px;
 
 }
-.popularity-content {
-    background-color: #fff1e6;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.sub-section {
+    width: 40vw;
+    margin: 30px;
+}
+.text {
+    margin: 0 10px;
 }
