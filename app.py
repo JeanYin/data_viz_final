@@ -40,9 +40,9 @@ fig4.layout.showlegend = False
 # fig5.update_layout(legend_traceorder="reversed")
 # fig5.update_xaxes(range=[0, 10])
 # fig5.update_yaxes(range=[0, 10])
-# fig6 = px.scatter(df, x='averageRating', y='runtimeMinutes', animation_frame='startYear', animation_group='genres',
-#            size="averageRating", color='genres', hover_name="primaryTitle",range_x=[0.0,10.0], range_y=[0,600])
-# fig6["layout"].pop("updatemenus")
+fig6 = px.scatter(df, x='averageRating', y='runtimeMinutes', animation_frame='startYear', animation_group='genres',
+           size="averageRating", color='genres', hover_name="primaryTitle",range_x=[0.0,10.0], range_y=[0,600])
+fig6["layout"].pop("updatemenus")
 
 app.layout = html.Div(className='main',children=[
     html.H1(children='IMDb Data Visualization', className='title'),
@@ -75,10 +75,10 @@ app.layout = html.Div(className='main',children=[
         html.Div(
             className='sub-section',
             children=[
-                html.Img(
-                    src='https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg',
-                    width='600px'
-                ),
+                # html.Img(
+                #     src='https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg',
+                #     width='600px'
+                # ),
                 html.Div(className='text', children='''
                     Considering the information a movie watcher mostly wants to know might be the title of the movie, we used Figma to mock up the blow bubble charts with interactions showing detailed information of each movie. We planned to show decades from 1940s to 2010s. So far, we have mocked up visualizations for two decades (see below).
                 ''')
@@ -185,26 +185,26 @@ app.layout = html.Div(className='main',children=[
             '''),
         ])
     ]),
-    # html.Div(className='section', children=[
-    #     html.Div(className='sub-section', children=[
-    #         html.H4(children='[title here]'),
-    #         dcc.Graph(
-    #             figure=fig5
-    #         ),
-    #         html.Div(className='text', children='''
-    #             [description here]
-    #         ''')
-    #     ]),
-    #     html.Div(className='sub-section', children=[
-    #         html.H4(children='[title here]'),
-    #         dcc.Graph(
-    #             figure=fig6
-    #         ),
-    #         html.Div(className='text', children='''
-    #             [description here]
-    #         '''),
-    #     ])
-    # ])
+    html.Div(className='section', children=[
+        # html.Div(className='sub-section', children=[
+        #     html.H4(children='[title here]'),
+        #     dcc.Graph(
+        #         figure=fig5
+        #     ),
+        #     html.Div(className='text', children='''
+        #         [description here]
+        #     ''')
+        # ]),
+        html.Div(className='sub-section', children=[
+            html.H4(children='[title here]'),
+            dcc.Graph(
+                figure=fig6
+            ),
+            html.Div(className='text', children='''
+                [description here]
+            '''),
+        ])
+    ])
 ])
 
 if __name__ == '__main__':
