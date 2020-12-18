@@ -75,10 +75,10 @@ app.layout = html.Div(className='main',children=[
         html.Div(
             className='sub-section',
             children=[
-                html.Img(
-                    src='assets/Picture1.png',
-                    width='600px'
-                ),
+                # html.Img(
+                #     src='assets/Picture1.png',
+                #     width='600px'
+                # ),
                 html.Div(className='text', children='''
                     Considering the information a movie watcher mostly wants to know might be the title of the movie, we used Figma to mock up the blow bubble charts with interactions showing detailed information of each movie. We planned to show decades from 1940s to 2010s. So far, we have mocked up visualizations for two decades (see below).
                 ''')
