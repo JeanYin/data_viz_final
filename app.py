@@ -187,26 +187,26 @@ app.layout = html.Div(className='main',children=[
             '''),
         ])
     ]),
-    html.Div(className='section', children=[
-        html.Div(className='sub-section', children=[
-            html.H4(children='[title here]'),
-            dcc.Graph(
-                figure=fig5
-            ),
-            html.Div(className='text', children='''
-                [description here]
-            ''')
-        ]),
-        html.Div(className='sub-section', children=[
-            html.H4(children='[title here]'),
-            dcc.Graph(
-                figure=fig6
-            ),
-            html.Div(className='text', children='''
-                [description here]
-            '''),
-        ])
-    ])
+    # html.Div(className='section', children=[
+    #     html.Div(className='sub-section', children=[
+    #         html.H4(children='[title here]'),
+    #         dcc.Graph(
+    #             figure=fig5
+    #         ),
+    #         html.Div(className='text', children='''
+    #             [description here]
+    #         ''')
+    #     ]),
+    #     html.Div(className='sub-section', children=[
+    #         html.H4(children='[title here]'),
+    #         dcc.Graph(
+    #             figure=fig6
+    #         ),
+    #         html.Div(className='text', children='''
+    #             [description here]
+    #         '''),
+    #     ])
+    # ])
 ])
 
 if __name__ == '__main__':
