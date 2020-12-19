@@ -64,24 +64,24 @@ app.layout = html.Div(className='main',children=[
         html.Div(
             className='sub-section',
             children=[
+                html.Div(className='text', children='''
+                    From the stacked bar graph, we can see the top 5 rated movies in different decades. If you hover over each bar segment, you’ll learn detailed information about each movie, including title, release year, and the average rating.
+                '''),
                 dcc.Graph(
                     figure=fig3
-                ),
-                html.Div(className='text',children='''
-                    From the stacked bar graph, we can see the top 5 rated movies in different decades. If you hover over each bar segment, you’ll learn detailed information about each movie, including title, release year, and the average rating.
-                ''')
+                )
             ]
         ),
         html.Div(
             className='sub-section',
             children=[
-                html.Img(
-                    src='assets/Picture1.png',
-                    width='600px'
-                ),
                 html.Div(className='text', children='''
                     Considering the information a movie watcher mostly wants to know might be the title of the movie, we used Figma to mock up the blow bubble charts with interactions showing detailed information of each movie. We planned to show decades from 1940s to 2010s. So far, we have mocked up visualizations for two decades (see below).
-                ''')
+                '''),
+                html.Img(
+                    src='https://datavisfinalxiaomei.s3.us-east-2.amazonaws.com/Picture1.png',
+                    width='600px'
+                )
             ]
         )
     ]),
@@ -90,24 +90,24 @@ app.layout = html.Div(className='main',children=[
         html.Div(
             className='sub-section',
             children=[
-                dcc.Graph(
-                    figure=fig4
-                ),
                 html.Div(className='text', children='''
                     The stacked bar graph highlights the top 5 rating movies for each genre, the interaction shows the title and average rating for each movie.
-                ''')
+                '''),
+                dcc.Graph(
+                    figure=fig4
+                )
             ]
         ),
         html.Div(
             className='sub-section',
             children=[
-                html.Img(
-                    src='assets/Picture2.png',
-                    width='600px'
-                ),
                 html.Div(className='text', children='''
                     For the same reason as above, we wanted to develop bubble graphs to show top 5 rated movies for each genre. The interaction feature could show detailed information of each movie for a movie watcher, like running time and rating score. Here below are two of them we have created.                
-                ''')
+                '''),
+                html.Img(
+                    src='https://datavisfinalxiaomei.s3.us-east-2.amazonaws.com/Picture2.png',
+                    width='600px'
+                )
             ]
         ),
     ]),
@@ -118,25 +118,25 @@ app.layout = html.Div(className='main',children=[
             className='sub-section',
             children=[
                 html.H4(children='Which year had maximum releases?'),
-                html.Img(
-                    src='assets/Picture3.png',
-                    height='350px',
-                ),
                 html.Div(className='text', children='''
                     From this bar graph, we can see that the number of movie releases has increased over years and it reached to the highest point around 2010. 
-                ''')
+                '''),
+                html.Img(
+                    src='https://datavisfinalxiaomei.s3.us-east-2.amazonaws.com/Picture3.png',
+                    height='350px',
+                )
         ]),
         html.Div(
             className='sub-section',
             children=[
                 html.H4(children='What are avg running time in millions of movies?'),
-                html.Img(
-                    src='assets/Picture4.png',
-                    height='350px'
-                ),
                 html.Div(className='text', children='''
                     The bar graph displays the distribution of running time of all the movies. There are not many titles longer than 200 minutes and 40 minutes is lower band of the data. Every bin corresponds to 10 minute range. Vast majority of movies is 80-100 mins long.
-                ''')
+                '''),
+                html.Img(
+                    src='https://datavisfinalxiaomei.s3.us-east-2.amazonaws.com/Picture4.png',
+                    height='350px'
+                )
         ])
     ]),
     html.Div(className='section', children=[
@@ -144,45 +144,45 @@ app.layout = html.Div(className='main',children=[
             className='sub-section',
             children=[
                 html.H4(children='Are new movies longer than they were 10, 20, 50 year ago?'),
-                html.Img(
-                    src='assets/Picture5.png',
-                    height='350px'
-                ),
                 html.Div(className='text', children='''
                     The graph displays the average running time and its standard deviation over years. We can see they were on average 90 minutes long in early 1930s and reached 100-110 minutes in mid-50s. Since then there is no trend in our data. Also, the standard deviation is fairly consistent with 80-130 minutes runtime. However, the variation changed a lot around 2010 and 2018. We haven’t figured the exact reasons for it.
-                ''')
+                '''),
+                html.Img(
+                    src='https://datavisfinalxiaomei.s3.us-east-2.amazonaws.com/Picture5.png',
+                    height='350px'
+                )
             ]),
         html.Div(
             className='sub-section',
             children=[
                 html.H4(children='Which genres of movies are most prevalent?'),
-                html.Img(
-                    src='assets/Picture6.png',
-                    height='350px'
-                ),
                 html.Div(className='text', children='''
                     The pie chart displays the most frequent genres of movies and we can see that movies of the genres ‘Drama’ and ‘Comedy’ were most prevalent over the years.
-                ''')
+                '''),
+                html.Img(
+                    src='https://datavisfinalxiaomei.s3.us-east-2.amazonaws.com/Picture6.png',
+                    height='350px'
+                )
             ])
     ]),
     html.Div(className='section',children=[
         html.Div(className='sub-section', children=[
             html.H4(children='How has the number of votes and average movie rating changed over time?'),
-            dcc.Graph(
-                figure=fig1
-            ),
             html.Div(className='text', children='''
                 This bubble plot highlights how the number of votes for each genre has increased from the 20th century to 21st century, indicated by the size of each bubble. We can see the genres of crime and drama got most number of votes. If you hover over each bubble, you’ll learn detailed information of each genre. It shows that drama, documentary, biography and Sci-Fi got highest average rating score. It also shows that some genres, like crime, action, documentary, comedy, got very low rating score around 2010.
-            ''')
+            '''),
+            dcc.Graph(
+                figure=fig1
+            )
         ]),
         html.Div(className='sub-section',children=[
             html.H4(children="What's the most popular movie for different genres?"),
-            dcc.Graph(
-                figure=fig2
-            ),
             html.Div(className='text', children='''
                 This sunburst chart displays the most popular movies for different genres. We used number of votes to indicate the popularity. We can see a distribution of the genres. In this figure, the inner layout is to show the type of genres, and the outer layout is to show the corresponding title for each genres. By clicking the specific genre, you can see more detailed information about the movie title for each genre. 
             '''),
+            dcc.Graph(
+                figure=fig2
+            )
         ])
     ]),
     # html.Div(className='section', children=[

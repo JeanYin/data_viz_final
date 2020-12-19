@@ -27,11 +27,24 @@
     <list default="true" id="005b0378-d4b3-4efb-89f6-6a570199a3b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Picture1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Picture2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Picture3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Picture4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Picture5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Picture6.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -103,10 +116,10 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="232" y="143" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.960@0.0.1536.960" timestamp="1608089820686" />
-    <state x="506" y="235" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608329352643">
+    <state x="506" y="235" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608338738778">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="506" y="235" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.960@0.0.1536.960" timestamp="1608329352643" />
+    <state x="506" y="235" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.960@0.0.1536.960" timestamp="1608338738778" />
     <state width="1515" height="265" key="GridCell.Tab.0.bottom" timestamp="1608325458423">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
