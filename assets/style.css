@@ -4,7 +4,6 @@ body {
 .main {
     margin: 50px;
 }
-
 .title {
     text-align: center;
 }
@@ -13,7 +12,6 @@ body {
     justify-content: center;
     height: auto;
     margin: 0 20px;
-
 }
 .sub-section {
     width: 40vw;

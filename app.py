@@ -28,7 +28,10 @@ fig3.layout.showlegend = False
 fig4 = px.bar(byGenres, x="genres", y="averageRating", color="primaryTitle", title="Top 5 rating movies by genres")
 fig4.layout.showlegend = False
 fig5 = px.scatter(sub, x="MovieRating", y="DirectorRating", color="class", size="scaledVotes",
-                 labels={"class": "Moving Rating vs Director Rating"},
+                 labels={"class": "",
+                         "MovieRating": "Movie Rating",
+                         "DirectorRating": "Average Director Rating"},
+                 title="Movie Rating v.s. Director Rating(Average Movie Rating of Director)",
                  animation_frame="decade",
                  hover_name="MovieTitle",
                  hover_data={
@@ -43,6 +46,9 @@ fig5.update_yaxes(range=[0, 10])
 
 app.layout = html.Div(className='main',children=[
     html.H1(children='IMDb Data Visualization', className='title'),
+    html.H6(className='title',children='''
+        Team Members: Xiaohan Yin, Jing Huang, Jasmine Kuo, Xiaomei Wang, Qiong (Tina) Nie
+    '''),
     html.Div(className='text',children='''
         We explored and used the IMDB data from 1894-2020 to develop visualizations of movies. The IMDb.com is the biggest movie website in the world. Its database includes nearly one billion titles! There are 13 types of titles, including short, movie, tvMovie, tvEpisode, etc. we were interested only in movies, so we left in our dataset rows marked as movie and tvMovie. 
     '''),
@@ -192,7 +198,23 @@ app.layout = html.Div(className='main',children=[
                 figure=fig5
             )
         ])
-    ])
+    ]),
+    html.Hr(),
+    html.H3(children='Reference'),
+    html.Ul(
+        children=[
+            html.Li(children='https://stackoverflow.com/questions/18039057/python-pandas-error-tokenizing-data'),
+            html.Li(children='https://towardsdatascience.com/are-new-movies-longer-than-they-were-10hh20-50-year-ago-a35356b2ca5b#:~:text=The%20most%20popular%20runtime%20is,average%20movie%20runtime%20by%20year.'),
+            html.Li(children='https://towardsdatascience.com/exploring-movie-data-with-interactive-visualizations-c22e8ce5f663'),
+            html.Li(children='https://rpubs.com/erhoades/593226'),
+            html.Li(children='https://stackoverflow.com/questions/18039057/python-pandas-error-tokenizing-data'),
+            html.Li(children='https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html'),
+            html.Li(children='https://learnetto.com/blog/cloudfront-s3'),
+            html.Li(children='https://plotly.com/python/sliders/'),
+            html.Li(children='https://devcenter.heroku.com/articles/getting-started-with-python'),
+            html.Li(children='https://dash.plotly.com/')
+        ]
+    )
 ])
 
 if __name__ == '__main__':
