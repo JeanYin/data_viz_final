@@ -40,9 +40,9 @@ fig4.layout.showlegend = False
 # fig5.update_layout(legend_traceorder="reversed")
 # fig5.update_xaxes(range=[0, 10])
 # fig5.update_yaxes(range=[0, 10])
-# fig6 = px.scatter(df, x='averageRating', y='runtimeMinutes', animation_frame='startYear', animation_group='genres',
-#            size="averageRating", color='genres', hover_name="primaryTitle",range_x=[0.0,10.0], range_y=[0,600])
-# fig6["layout"].pop("updatemenus")
+fig6 = px.scatter(df, x='averageRating', y='runtimeMinutes', animation_frame='startYear', animation_group='genres',
+           size="averageRating", color='genres', hover_name="primaryTitle",range_x=[0.0,10.0], range_y=[0,600])
+fig6["layout"].pop("updatemenus")
 
 app.layout = html.Div(className='main',children=[
     html.H1(children='IMDb Data Visualization', className='title'),
@@ -185,7 +185,7 @@ app.layout = html.Div(className='main',children=[
             )
         ])
     ]),
-    # html.Div(className='section', children=[
+    html.Div(className='section', children=[
         # html.Div(className='sub-section', children=[
         #     html.H4(children='[title here]'),
         #     dcc.Graph(
@@ -195,16 +195,16 @@ app.layout = html.Div(className='main',children=[
         #         [description here]
         #     ''')
         # ]),
-        # html.Div(className='sub-section', children=[
-        #     html.H4(children='[title here]'),
-        #     dcc.Graph(
-        #         figure=fig6
-        #     ),
-        #     html.Div(className='text', children='''
-        #         [description here]
-        #     '''),
-        # ])
-    # ])
+        html.Div(className='sub-section', children=[
+            html.H4(children='[title here]'),
+            dcc.Graph(
+                figure=fig6
+            ),
+            html.Div(className='text', children='''
+                [description here]
+            '''),
+        ])
+    ])
 ])
 
 if __name__ == '__main__':
