@@ -1,6 +1,6 @@
 ## Introduction
 
-This project is the final project for the UIUC source IS 455 Data Visualization. The project built a "real-time" dashboard which demonstrates the distribution and tendency of the data. The data comes from [IMDb dataset](https://www.imdb.com/interfaces/). Through the databoard, users can gain more insights of the dataset. The project is deployed on heroku, you can visit the demo [here](https://data-viz-final.herokuapp.com/).
+This project is the final project for the UIUC source IS 455 Data Visualization. The project built a "real-time" dashboard which demonstrates the distribution and tendency of the data. The data comes from [IMDb dataset](https://www.imdb.com/interfaces/). Through the databoard, users can gain more insights of the dataset. The project is deployed on heroku, you can visit the demo [https://data-viz-final.herokuapp.com/](https://data-viz-final.herokuapp.com/).
 
 ## Get to start
 
