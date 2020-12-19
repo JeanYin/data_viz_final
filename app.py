@@ -14,7 +14,7 @@ app = dash.Dash(__name__,external_stylesheets=external_stylesheets)
 server = app.server
 
 df = pd.read_csv('data.csv')
-# sub = pd.read_csv("part3_rating.csv")
+sub = pd.read_csv("part3_rating.csv")
 df_genres = df.copy()
 df_genres['genres'] = df_genres['genres'].str.split(',')
 df_genres = df_genres.explode('genres')
@@ -40,9 +40,9 @@ fig5 = px.scatter(sub, x="MovieRating", y="DirectorRating", color="class", size=
 fig5.update_layout(legend_traceorder="reversed")
 fig5.update_xaxes(range=[0, 10])
 fig5.update_yaxes(range=[0, 10])
-fig6 = px.scatter(df, x='averageRating', y='runtimeMinutes', animation_frame='startYear', animation_group='genres',
-           size="averageRating", color='genres', hover_name="primaryTitle",range_x=[0.0,10.0], range_y=[0,600])
-fig6["layout"].pop("updatemenus")
+# fig6 = px.scatter(df, x='averageRating', y='runtimeMinutes', animation_frame='startYear', animation_group='genres',
+#            size="averageRating", color='genres', hover_name="primaryTitle",range_x=[0.0,10.0], range_y=[0,600])
+# fig6["layout"].pop("updatemenus")
 
 app.layout = html.Div(className='main',children=[
     html.H1(children='IMDb Data Visualization', className='title'),
