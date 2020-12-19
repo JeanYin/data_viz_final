@@ -27,19 +27,19 @@ fig3 = px.bar(byYear, x="startYear", y="averageRating", color="primaryTitle", ti
 fig3.layout.showlegend = False
 fig4 = px.bar(byGenres, x="genres", y="averageRating", color="primaryTitle", title="Top 5 rating movies by genres")
 fig4.layout.showlegend = False
-# fig5 = px.scatter(sub, x="MovieRating", y="DirectorRating", color="class", size="scaledVotes",
-#                  labels={"class": "Moving Rating vs Director Rating"},
-#                  animation_frame="decade",
-#                  hover_name="MovieTitle",
-#                  hover_data={
-#                      "class": False,
-#                      "decade": False,
-#                      "scaledVotes": False,
-#                      "Directors": True
-#                  })
-# fig5.update_layout(legend_traceorder="reversed")
-# fig5.update_xaxes(range=[0, 10])
-# fig5.update_yaxes(range=[0, 10])
+fig5 = px.scatter(sub, x="MovieRating", y="DirectorRating", color="class", size="scaledVotes",
+                 labels={"class": "Moving Rating vs Director Rating"},
+                 animation_frame="decade",
+                 hover_name="MovieTitle",
+                 hover_data={
+                     "class": False,
+                     "decade": False,
+                     "scaledVotes": False,
+                     "Directors": True
+                 })
+fig5.update_layout(legend_traceorder="reversed")
+fig5.update_xaxes(range=[0, 10])
+fig5.update_yaxes(range=[0, 10])
 fig6 = px.scatter(df, x='averageRating', y='runtimeMinutes', animation_frame='startYear', animation_group='genres',
            size="averageRating", color='genres', hover_name="primaryTitle",range_x=[0.0,10.0], range_y=[0,600])
 fig6["layout"].pop("updatemenus")
@@ -186,24 +186,24 @@ app.layout = html.Div(className='main',children=[
         ])
     ]),
     html.Div(className='section', children=[
-        # html.Div(className='sub-section', children=[
-        #     html.H4(children='[title here]'),
-        #     dcc.Graph(
-        #         figure=fig5
-        #     ),
-        #     html.Div(className='text', children='''
-        #         [description here]
-        #     ''')
-        # ]),
         html.Div(className='sub-section', children=[
             html.H4(children='[title here]'),
             dcc.Graph(
-                figure=fig6
+                figure=fig5
             ),
             html.Div(className='text', children='''
                 [description here]
-            '''),
-        ])
+            ''')
+        ]),
+        # html.Div(className='sub-section', children=[
+        #     html.H4(children='[title here]'),
+        #     dcc.Graph(
+        #         figure=fig6
+        #     ),
+        #     html.Div(className='text', children='''
+        #         [description here]
+        #     '''),
+        # ])
     ])
 ])
 
