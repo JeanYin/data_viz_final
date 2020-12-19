@@ -40,9 +40,6 @@ fig5 = px.scatter(sub, x="MovieRating", y="DirectorRating", color="class", size=
 fig5.update_layout(legend_traceorder="reversed")
 fig5.update_xaxes(range=[0, 10])
 fig5.update_yaxes(range=[0, 10])
-# fig6 = px.scatter(df, x='averageRating', y='runtimeMinutes', animation_frame='startYear', animation_group='genres',
-#            size="averageRating", color='genres', hover_name="primaryTitle",range_x=[0.0,10.0], range_y=[0,600])
-# fig6["layout"].pop("updatemenus")
 
 app.layout = html.Div(className='main',children=[
     html.H1(children='IMDb Data Visualization', className='title'),
@@ -186,24 +183,15 @@ app.layout = html.Div(className='main',children=[
         ])
     ]),
     html.Div(className='section', children=[
-        html.Div(className='sub-section', children=[
-            html.H4(children='[title here]'),
+        html.Div(className='last-figure', children=[
+            html.H4(children='How many movies are better/worse than the average move rating for the director?',className='title'),
+            html.Div(className='text', children='''
+                In the below interactive scatter plot, orange points represent movies that have a higher rating score than the average movie rating for the director; while the blue points represent the ones that have a lower rating than the average. We can see that in general, the number of movies outperformed the average level of movie ratings for the director was equal to the ones underperformed. When you display the slider, you can see the quantity of both types of movies has been increasing since 1910s.
+            '''),
             dcc.Graph(
                 figure=fig5
-            ),
-            html.Div(className='text', children='''
-                [description here]
-            ''')
-        ]),
-        # html.Div(className='sub-section', children=[
-        #     html.H4(children='[title here]'),
-        #     dcc.Graph(
-        #         figure=fig6
-        #     ),
-        #     html.Div(className='text', children='''
-        #         [description here]
-        #     '''),
-        # ])
+            )
+        ])
     ])
 ])
 
